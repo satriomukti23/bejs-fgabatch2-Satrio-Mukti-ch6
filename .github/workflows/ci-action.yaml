@@ -9,10 +9,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
       RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
       IMAGE_KIT_PUBLIC_KEY: ${{ secrets.IMAGE_KIT_PUBLIC_KEY }}
       IMAGE_KIT_PRIVATE_KEY: ${{ secrets.IMAGE_KIT_PRIVATE_KEY }}
-      IMAGE_KIT_ENDPOINT: ${{ secrets.IMAGE_KIT_ENDPOINT }}
+      IMAGE_KIT_URL_ENDPOINT: ${{ secrets.IMAGE_KIT_URL_ENDPOINT }}
 
     steps:
     - name: Checkout code
