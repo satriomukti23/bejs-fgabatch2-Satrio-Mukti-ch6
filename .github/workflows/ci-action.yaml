@@ -20,6 +20,7 @@ jobs:
 
     - name: Deploy to Railway
       env:
+        DATABASE_URL: ${{ secrets.DATABASE_URL }}
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
       run: |
         railway up --service bejs-fgabatch2-Satrio-Mukti-ch6
