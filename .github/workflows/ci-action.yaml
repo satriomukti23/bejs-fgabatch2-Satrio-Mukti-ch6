@@ -26,6 +26,3 @@ jobs:
     - name: Deploy to Railway
       run: |
         railway up --service bejs-fgabatch2-Satrio-Mukti-ch6
-    
-    - name: Setup database
-      run: railway run --service bejs-fgabatch2-Satrio-Mukti-ch6 npx prisma migrate deploy
